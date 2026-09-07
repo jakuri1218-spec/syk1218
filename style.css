@@ -1,0 +1,2598 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Yu Gothic", sans-serif;
+    background: #ebe8dd86;
+    color: #fffefd;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: rgba(233, 229, 229, 0.452);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+header .container {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    display: block;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+#nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#nav a {
+    position: relative;
+
+    color: #111;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+#nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff8c00;
+
+    transition: 0.3s;
+}
+
+#nav a:hover {
+    color: #ff8c00;
+}
+
+#nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   HAMBURGER / OVERLAY
+======================================== */
+
+.hamburger {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+}
+
+.hero-inner {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns-arrow {
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.instagram,
+.x,
+.youtube {
+    font-size: 40px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    background: #ff8c00;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    margin-top: 50px;
+
+    transition: 0.3s;
+
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.btn:hover {
+    background: #ff6500;
+
+    transform: scale(1.08);
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.about,
+.menu,
+.gallery,
+.shop {
+    text-align: left;
+
+    padding: 80px 0;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.about h2,
+.menu h2,
+.gallery h2,
+.shop h2 {
+    position: relative;
+
+    width: 30%;
+
+    font-size: 2.8rem;
+
+    color: #ffffff;
+
+    border-bottom: 1px solid #ffffff;
+
+    z-index: 1;
+}
+
+.about h2::before {
+    content: "ABOUT";
+}
+
+.menu h2::before {
+    content: "MENU";
+}
+
+.gallery h2::before {
+    content: "NEWS";
+}
+
+.shop h2::before {
+    content: "RESERVE";
+}
+
+.about h2::before,
+.menu h2::before,
+.gallery h2::before,
+.shop h2::before {
+
+    position: absolute;
+
+    left: 0;
+    top: -35px;
+
+    font-size: 5rem;
+    font-weight: 700;
+
+    color: rgba(0, 0, 0, 0.2);
+
+    letter-spacing: 8px;
+
+    z-index: -1;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about > .container > p {
+    margin-top: 100px;
+}
+
+.about {
+    position: relative;
+
+    background-image: url(images/グレー.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.4);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+.about-image {
+    position: relative;
+
+    overflow: hidden;
+
+    max-width: 800px;
+    height: 750px;
+
+    margin: 40px auto;
+
+    border-radius: 50%;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: brightness(55%);
+
+    animation: kenburns 12s ease-in-out infinite alternate;
+}
+
+.about-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.about-text p {
+    font-size: 1.5rem;
+
+    line-height: 2.2;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+.about-text strong {
+    color: #fdfdfc;
+
+    padding: 20px;
+}
+
+@keyframes kenburns {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+
+}
+
+
+/* ========================================
+   MENU CARD
+======================================== */
+
+.menu {
+    background-image: url(images/黄色白.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu p,
+.menu h3 {
+    color: black;
+
+    margin-top: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    width: 100%;
+
+    margin-top: 50px;
+}
+
+
+/* ========================================
+   FOOD PHOTO SLIDER
+======================================== */
+
+.food-slider {
+    width: 100%;
+    overflow: hidden;
+
+    margin-top: 70px;
+    padding: 20px 0;
+}
+
+.food-slider-track {
+    display: flex;
+    width: max-content;
+
+    gap: 25px;
+
+    animation: foodSlide 25s linear infinite;
+}
+
+.food-slider-track img {
+    flex-shrink: 0;
+
+    width: 280px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+}
+
+.food-slider-track img:hover {
+    transform: scale(1.05);
+}
+
+
+/* 左 → 右へ流す */
+
+@keyframes foodSlide {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+/* ========================================
+   FOOD MENU
+======================================== */
+
+h3 {
+    color: #ec8d0f;
+
+    margin: 30px;
+}
+
+.menu-list {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 45px 40px;
+
+    background: linear-gradient(
+        145deg,
+        #5a3926,
+        #7c501a
+    );
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.menu-list h3 {
+    position: relative;
+
+    color: #ffb347;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 6px;
+
+    margin: 10px 0 30px;
+
+    text-shadow: 0 2px 10px rgba(255, 140, 0, 0.4);
+}
+
+.menu-list h3::before,
+.menu-list h3::after {
+    content: "";
+
+    display: inline-block;
+
+    width: 45px;
+    height: 1px;
+
+    background: #ffb347;
+
+    vertical-align: middle;
+
+    margin: 0 15px;
+
+    opacity: 0.7;
+}
+
+.menu-item {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 25px;
+
+    margin: 14px 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.10),
+        rgba(255, 255, 255, 0.03)
+    );
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+.menu-item span:first-child {
+    padding-left: 50px;
+
+    color: #f1a500;
+
+    font-size: 1.15rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.menu-item span:last-child {
+    padding-right: 50px;
+
+    color: #ec8d0f;
+
+    font-size: 1.25rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 2px 8px rgba(255, 251, 251, 0.3);
+}
+.menu-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ホバーしたとき */
+.menu-card:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.menu-card a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 12px 25px;
+
+    color: #fff;
+    font-family: "Poppins", "Yu Gothic", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+
+    z-index: 2;
+
+    transition: 0.3s ease;
+}
+
+.menu-card a:hover {
+    background: rgba(255, 140, 0, 0.8);
+    border-color: #fff;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+
+/* ========================================
+   NEWS
+======================================== */
+
+.gallery {
+    background-image: url(images/グレー茶線.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.news-list {
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    font-size: 1.5rem;
+}
+
+
+.news-item {
+    display: grid;
+
+    grid-template-columns: 160px 1fr;
+
+    gap: 30px;
+
+    padding: 20px 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #111;
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.news-item time {
+    color: #fafafa;
+    width: 100px;
+    font-weight: bold;
+}
+
+.news-item span {
+    color: #faf8f8;
+    font-weight: 600;
+}
+.new-badge {
+display: inline-block;
+background: #e60012;
+color: #fff;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+padding: 4px 8px;
+border-radius: 20px;
+margin-bottom: 6px;
+box-shadow: 0 3px 8px rgba(230, 0, 18, 0.25);
+animation: new-badge-pop 1.8s ease-in-out infinite;
+}
+
+/* NEW! ふわっと動く */
+@keyframes new-badge-pop {
+0%, 100% {
+transform: scale(1);
+}
+
+50% {
+    transform: scale(1.08);
+}
+
+
+}
+
+/* ホバー時 */
+.news-item:hover {
+    background-color: #e0852f2c;
+    transform: translateX(5px);
+}
+
+/* =========================
+   NEWS DETAIL
+========================= */
+
+.news-detail {
+    padding: 140px 0 100px;
+    background: #fff;
+    min-height: 70vh;
+}
+
+.news-detail .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.news-detail-date {
+    color: #e85d04;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.news-detail h1 {
+    font-size: 42px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.news-detail-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.news-detail-image img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.news-detail-text {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #444;
+}
+
+.news-detail-text p {
+    margin-bottom: 25px;
+}
+
+.news-detail-text strong {
+    color: #e85d04;
+}
+
+.news-detail-text .special {
+    display: inline-block;
+    font-size: 28px;
+    color: #e85d04;
+    margin: 10px 0;
+}
+
+.news-back {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 14px 30px;
+    color: #fff;
+    background: #e85d04;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.news-back:hover {
+    background: #c94d00;
+    transform: translateX(-5px);
+}
+
+
+/* =========================
+   NEWS DETAIL MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .news-detail {
+        padding: 110px 20px 70px;
+    }
+
+    .news-detail h1 {
+        font-size: 28px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .news-detail-image {
+        margin-bottom: 30px;
+    }
+
+    .news-detail-text {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .news-detail-text .special {
+        font-size: 23px;
+    }
+
+}
+
+
+/* ========================================
+   RESERVE
+======================================== */
+
+#prese {
+    color: #ffffff;
+
+    margin-top: 20px;
+
+    font-size: 1.5rem;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   RESERVE IMAGE + BUTTON
+======================================== */
+
+#shop {
+    background-image: url(images/きらきら.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#shop::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.reserve-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    overflow: hidden;
+}
+
+.reserve-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+
+    object-fit: cover;
+
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(8px, -12px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+}
+
+.reserve-image .btn {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+
+    padding: 15px 40px;
+
+    background: rgba(233, 140, 20);
+
+    color: #fff;
+
+    border: 1px solid #fff;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    animation: none;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
+}
+
+.reserve-image .btn:hover {
+    background: #fff;
+
+    color: #e98c14;
+
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* ========================================
+   RESERVE PAGE
+======================================== */
+
+.reserve-page {
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 150px auto 100px;
+
+    text-align: center;
+
+    color: #111;
+
+    font-size: 1.3rem;
+}
+
+.reserve-page .page-title h1 {
+    color: #ff8c00;
+
+    font-size: 2.8rem;
+
+    letter-spacing: 5px;
+
+    border-bottom: 1px solid #ff8c00;
+
+    padding-bottom: 10px;
+}
+
+.reserve-sub {
+    margin: 30px 0;
+
+    color: #0c0c0c;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   予約フォーム
+======================================== */
+
+.reserve-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+.reserve-form input,
+.reserve-form textarea {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #333;
+
+    font-size: 1.5rem;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.reserve-form input:focus,
+.reserve-form textarea:focus {
+    border-color: #ff8c00;
+
+    box-shadow:
+        0 0 5px rgba(255, 140, 0, 0.2);
+}
+
+.reserve-form input::placeholder,
+.reserve-form textarea::placeholder {
+    font-size: 1.1rem;
+}
+
+.reserve-form button {
+    width: 160px;
+
+    margin: 5px auto 0;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff8c00;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.reserve-form button:hover {
+    background: #fafafa;
+    color: #e98c14;
+
+    transform: scale(1.05);
+}
+
+.reserve-sub {
+    position: relative;
+
+    display: inline-block;
+
+    padding-bottom: 12px;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    animation: arrowBounce 1s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* ========================================
+   RESERVE PAGE BACKGROUND
+======================================== */
+
+body.reserve-page-bg {
+    position: relative;
+
+    background-image: url(images/コンクリハート.jpg);
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+body.reserve-page-bg::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    z-index: -1;
+}
+
+
+/* ========================================
+   BREADCRUMB
+======================================== */
+
+.breadcrumb {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 100px auto 30px;
+
+    font-size: 1.8rem;
+
+    color: #fffcfc;
+}
+
+.breadcrumb a {
+    color: #666;
+
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #d9a441;
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+
+/* ========================================
+   ★ RESERVE タイピング
+======================================== */
+
+.breadcrumb .current {
+    display: inline-block;
+
+    color: #f7f7f7;
+
+    font-weight: bold;
+
+    font-size: 1.8rem;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    vertical-align: middle;
+
+    /* 最初は文字を見せない */
+    max-width: 0;
+
+    /* カーソル */
+    border-right: 2px solid #d9a441;
+
+    /*
+       max-widthを広げることで
+       RESERVE全部を表示
+    */
+    animation:
+        reserveBreadcrumbShow 2s ease-out forwards,
+        reserveBreadcrumbCursor 0.7s step-end infinite;
+}
+
+
+/* RESERVEを表示 */
+
+@keyframes reserveBreadcrumbShow {
+
+    from {
+        max-width: 0;
+    }
+
+    to {
+        max-width: 200px;
+    }
+
+}
+
+
+/* カーソル点滅 */
+
+@keyframes reserveBreadcrumbCursor {
+
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+
+/* ========================================
+   PAGE TITLE
+======================================== */
+
+.page-title {
+    padding-top: 10px;
+
+    text-align: center;
+
+    color: #d9a441;
+}
+
+
+/* ========================================
+   GALLERY IMAGE
+======================================== */
+
+.gallery-grid img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-10px);
+}
+
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+#lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    z-index: 9999;
+}
+
+#lightbox img {
+    width: 80%;
+
+    max-width: 800px;
+}
+
+#close {
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #eceaea;
+
+    text-align: center;
+
+    color: #050505;
+
+    padding: 40px 0 20px;
+
+    font-size: 25px;
+}
+
+#yoko {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.footer-info {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    text-align: center;
+}
+
+.footer-info img {
+    width: 180px;
+
+    height: auto;
+}
+
+#add {
+    color: #1e1e1e;
+
+    font-size: 90%;
+
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+#add span {
+    display: block;
+
+    margin-top: 5px;
+}
+
+.map {
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 400px;
+
+    height: 180px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+footer > p {
+    margin-top: 20px;
+
+    font-size: 0.85rem;
+
+    color: #555;
+}
+
+
+/* ========================================
+   FIXED PAGE TOP
+======================================== */
+
+.fixed-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 900;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.back-top {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #ff8c00;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition: 0.4s;
+}
+
+.back-top::before {
+    content: "↑";
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 7px;
+
+    border: 1px solid #ff8c00;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    font-size: 1.4rem;
+
+    transition: 0.4s;
+}
+
+.back-top:hover {
+    color: #ff6500;
+
+    transform: translateY(-5px);
+}
+
+.back-top:hover::before {
+    background: #ff8c00;
+
+    color: white;
+
+    box-shadow:
+        0 0 15px rgba(255, 140, 0, 0.6);
+}
+
+
+/* ========================================
+   FADE
+======================================== */
+
+.fade {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   OPENING MOVIE
+======================================== */
+
+#loading {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #eceaea;
+
+    z-index: 9999;
+
+    transition: 1.2s ease;
+}
+
+#loading.fadeout {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+#openingVideo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.opening-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        rgb(243, 238, 238),
+        rgb(149, 150, 147)
+    );
+}
+
+.opening-content {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.opening-logo {
+    letter-spacing: 12px;
+
+    font-weight: 700;
+
+    animation:
+        logoFade 2s ease,
+        neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+.opening-logo img {
+    width: 250px;
+}
+
+.opening-sub {
+    margin-top: 15px;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 6px;
+
+    animation: subFade 3s ease;
+}
+
+.opening-story {
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: 1rem;
+
+    opacity: 0;
+
+    animation:
+        storyFade 2s ease 2s forwards;
+}
+
+@keyframes logoFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(360deg);
+    }
+
+}
+
+@keyframes neonGlow {
+
+    from {
+        text-shadow:
+            0 0 5px #ff8c00,
+            0 0 15px #ff8c00,
+            0 0 30px #ff6500;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #ff8c00,
+            0 0 40px #ff6500,
+            0 0 80px #ff4500;
+    }
+
+}
+
+@keyframes subFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes storyFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   OTHER
+======================================== */
+
+#photo {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 50px auto 70px;
+
+    text-align: center;
+}
+
+.main-photo {
+    display: block;
+
+    width: 100%;
+
+    max-width: 9000px;
+
+    height: 600px;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    border: 5px solid #ffffff; /* ← これ！ */
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sub-photo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.sub-photo img {
+    display: block;
+
+    width: 300px;
+    height: 200px;
+
+    border: 5px solid #ffffff; /* ← これ！ */
+
+    border-radius: 10px;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.18);
+
+    transition: 0.3s;
+}
+
+
+.back-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto;
+
+    padding: 12px 35px;
+
+    border: 1px solid #d9a441;
+
+    color: #d9a441;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #d9a441;
+
+    color: #111;
+}
+
+#pmoment {
+    color: #111;
+
+    text-align: center;
+
+    padding-bottom: 50px;
+
+    font-size: 1.7rem;
+
+    line-height: 2.3;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   TAKOYAKI PAGE BACKGROUND
+======================================== */
+
+body.menu1-page {
+    background-image: url(images/白グレー.jpg);
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+body.menu1-page::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(100,100,100, 0.8);
+
+    z-index: -1;
+}
+body.menu1-page #photo h3,
+body.menu1-page #photo .menu-item span {
+    color: #ffffff;
+}
+
+
+
+/* ========================================
+   TAKOYAKI PAGE
+======================================== */
+
+.page-title h1 {
+    font-size: 3.5rem;
+}
+
+#photo h3 {
+    font-size: 2rem;
+
+    margin: 40px 0 25px;
+}
+
+#photo .menu-item {
+    font-size: 1.8rem;
+}
+
+#photo .menu-item span:first-child {
+    font-size: 1.8rem;
+}
+
+#photo .menu-item span:last-child {
+    font-size: 1.8rem;
+}
+
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    *,
+    *::before,
+    *::after {
+        max-width: 100%;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+
+        max-width: 100%;
+    }
+
+
+    /* HEADER */
+
+    header {
+        height: 70px;
+    }
+
+    .logo img {
+        width: 100px;
+
+        height: auto;
+    }
+
+    .sns-arrow {
+        font-size: 32px;
+
+        margin-top: 60px;
+    }
+
+    .instagram,
+    .x,
+    .youtube {
+        font-size: 32px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+
+    /* HAMBURGER */
+
+    .hamburger {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+
+        top: 15px;
+        right: 15px;
+
+        width: 45px;
+        height: 45px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        background: #ff8c00;
+
+        color: white;
+
+        font-size: 1.5rem;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 1001;
+
+        transition: 0.3s;
+
+        box-shadow:
+            0 4px 12px rgba(255, 140, 0, 0.35);
+    }
+
+    .hamburger:hover {
+        background: #ff6500;
+
+        transform: scale(1.08);
+    }
+
+
+    /* NAV */
+
+    #nav {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 280px;
+        height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 35px;
+
+        background: rgba(243, 241, 241, 0.95);
+
+        backdrop-filter: blur(10px);
+
+        transition: 0.5s;
+
+        z-index: 1000;
+    }
+
+    #nav.active {
+        right: 0;
+    }
+
+    #nav a {
+        font-size: 1.2rem;
+
+        color: #111;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .hero-video {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .hero-inner {
+        width: calc(100% - 30px);
+
+        max-width: 100%;
+    }
+
+    .hero-inner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-inner p {
+        font-size: 1rem;
+    }
+
+
+    /* SECTION TITLE */
+
+    .about h2,
+    .menu h2,
+    .gallery h2,
+    .shop h2 {
+
+        width: 80%;
+
+        font-size: 2rem;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about h2::before,
+    .menu h2::before,
+    .gallery h2::before,
+    .shop h2::before {
+
+        font-size: 3rem;
+
+        top: -20px;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* ABOUT */
+
+    .about-image {
+        width: 90%;
+
+        max-width: 500px;
+
+        height: 520px;
+    }
+
+    .about-text {
+        padding: 20px;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+
+        line-height: 1.7;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* MENU */
+
+    .menu {
+        padding: 60px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+   
+   /* ========================================
+   FOOD SLIDER MOBILE
+======================================== */
+    .food-slider {
+        margin-top: 40px;
+        padding: 15px 0;
+    }
+
+    .food-slider-track {
+        gap: 15px;
+
+        animation-duration: 20s;
+    }
+
+    .food-slider-track img {
+        width: 200px;
+        height: 140px;
+
+        border-radius: 12px;
+    }
+
+
+    /* PHOTO */
+
+    #photo {
+        width: 90%;
+
+        margin: 40px auto 60px;
+    }
+
+    .main-photo {
+        width: 100%;
+
+        max-width: 650px;
+
+        height: 280px;
+
+        margin: 0 auto;
+
+        border-radius: 15px;
+    }
+
+    .sub-photo {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        margin-top: 25px;
+    }
+
+    .sub-photo img {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 200px;
+
+        margin: 0 auto;
+
+        border-radius: 15px;
+    }
+
+
+    /* NEWS */
+
+    .news-list {
+        width: 90%;
+
+        max-width: 100%;
+
+        margin: 50px auto;
+
+        font-size: 1.2rem;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        padding: 15px 5px;
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .news-item time {
+        font-size: 0.9rem;
+    }
+
+    .news-item span {
+        font-size: 0.95rem;
+    }
+
+
+    /* RESERVE */
+
+    .shop {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        padding: 20px 0 100px;
+    }
+
+    .shop h2 {
+        color: #ff8c00;
+
+        font-size: 2.5rem;
+
+        margin: 50px auto 30px;
+    }
+
+    .reserve-image {
+        position: relative;
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin: 30px auto;
+
+        overflow: hidden;
+    }
+
+    .reserve-image img {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        margin: 0;
+    }
+
+    .reserve-image .btn {
+        position: absolute;
+
+        z-index: 3;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        margin: 0;
+
+        padding: 15px 40px;
+
+        background: rgba(233, 140, 20, 0.7);
+
+        color: #fff;
+
+        border: 1px solid #fff;
+
+        border-radius: 30px;
+
+        font-size: 18px;
+
+        letter-spacing: 2px;
+
+        animation: none;
+
+        transition:
+            background 0.3s,
+            color 0.3s,
+            transform 0.3s;
+    }
+
+    .reserve-image .btn:hover {
+        background: #fff;
+
+        color: #000;
+
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    #prese {
+        color: #050505;
+
+        margin-top: 20px;
+
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* RESERVE PAGE */
+
+    .reserve-page {
+        margin-top: 130px;
+    }
+
+    .reserve-page .page-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .reserve-form {
+        width: 100%;
+    }
+
+
+    /* FORM */
+
+    form {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        max-width: 450px;
+
+        margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px 14px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        font-size: 0.9rem;
+
+        background: white;
+
+        color: #333;
+    }
+
+    form textarea {
+        min-height: 100px;
+
+        resize: vertical;
+    }
+
+    form button {
+        width: 160px;
+
+        margin: 5px auto 0;
+
+        padding: 11px 25px;
+
+        border: none;
+
+        border-radius: 25px;
+
+        background: #ff8c00;
+
+        color: white;
+
+        font-size: 1rem;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    form button:hover {
+        background: #ff6500;
+
+        transform: scale(1.05);
+    }
+
+
+    /* FOOTER */
+
+    #yoko {
+        width: 90%;
+
+        max-width: 100%;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .footer-info img {
+        width: 150px;
+    }
+
+    #add {
+        text-align: center;
+    }
+
+    #add span {
+        display: block;
+
+        margin: 10px 0;
+    }
+
+    .map {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 180px;
+    }
+
+
+    /* OPENING */
+
+    .opening-content {
+        width: calc(100% - 30px);
+
+        max-width: 100%;
+    }
+
+    .opening-logo {
+        font-size: 3.5rem;
+
+        letter-spacing: 5px;
+    }
+
+    .opening-logo img {
+        width: min(250px, 80vw);
+
+        max-width: 100%;
+    }
+
+    .opening-sub {
+        font-size: 1rem;
+    }
+
+
+    /* 横はみ出し対策 */
+
+    .about,
+    .menu,
+    .gallery,
+    .shop {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .gallery-grid {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+
+    .news-item {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .menu-card {   
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    }
+
+    @keyframes danceCardMobile {
+
+        0% {
+            transform: rotate(0deg) translateY(0) scale(1);
+        }
+
+        25% {
+    transform: rotate(-1deg) translateY(-3px) scale(1.005);
+    }
+
+    50% {
+        transform: rotate(1deg) translateY(0) scale(1);
+    }
+
+    75% {
+        transform: rotate(-0.7deg) translateY(-2px) scale(1.005);
+    }
+
+        100% {
+            transform: rotate(0deg) translateY(0) scale(1);
+        }
+
+    }
+
+    .sub-photo img {
+    border: 3px solid #ffffff;
+}
+
+
+    /* ========================================
+       MOBILE - BREADCRUMB
+    ======================================== */
+
+    .breadcrumb {
+        width: 90%;
+
+        margin: 100px auto 30px;
+
+        font-size: 0.95rem;
+    }
+
+    .breadcrumb .current {
+        font-size: 1.2rem;
+
+        max-width: 0;
+
+        animation:
+            reserveBreadcrumbShow 2s ease-out forwards,
+            reserveBreadcrumbCursor 0.7s step-end infinite;
+    }
+
+
+    /* ========================================
+       MOBILE - TAKOYAKI
+    ======================================== */
+
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+
+    #photo h3 {
+        font-size: 1.6rem;
+    }
+
+    #photo .menu-item span:first-child {
+        font-size: 1.05rem;
+    }
+
+    #photo .menu-item span:last-child {
+        font-size: 1.1rem;
+    }
+
+    #pmoment {
+        font-size: 1rem;
+
+        line-height: 2;
+    }
+
+}

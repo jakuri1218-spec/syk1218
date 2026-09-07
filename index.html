@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TACOBA | TACOYAKI BAR</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body id="top">
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <div id="loading">
+
+        <video
+            id="openingVideo"
+            autoplay
+            muted
+            playsinline
+            src="movie/kanpai.mp4"
+        ></video>
+
+        <div class="opening-overlay"></div>
+
+        <div class="opening-content">
+
+            <h1 class="opening-logo">
+                <img
+                    src="images/ロゴ.png"
+                    alt="TaCoBaロゴ"
+                >
+            </h1>
+
+            <p class="opening-sub">
+                TACOYAKI × BAR
+            </p>
+
+            <div class="opening-story">
+                <span>
+                    <strong>丸いたこ焼き×丸い時間</strong>
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container">
+
+            <!-- ロゴ -->
+            <a href="#top" class="logo">
+                <img
+                    src="images/ロゴ.png"
+                    alt="TaCoBaロゴ"
+                >
+            </a>
+
+            <!-- ハンバーガーメニュー -->
+            <button
+                class="hamburger"
+                id="hamburger"
+                type="button"
+                aria-label="メニューを開く"
+            >
+                ☰
+            </button>
+
+            <!-- ナビゲーション -->
+            <nav id="nav">
+
+                <a href="#about">ABOUT</a>
+                <a href="#menu">MENU</a>
+                <a href="#gallery">NEWS</a>
+                <a href="#shop">RESERVE</a>
+
+                <!-- SNS -->
+
+                <a href="#" class="instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="x" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" class="youtube" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ナビゲーション背景 -->
+    <div id="overlay"></div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <video
+                class="hero-video"
+                id="heroMovie"
+                autoplay
+                muted
+                loop
+                playsinline
+            ></video>
+
+            <div class="hero-inner">
+
+                <h1>TACOYAKI × BAR</h1>
+
+                <p>
+                    焼きたての丸いたこやきと<br>
+                    おいしいお酒で丸い時間を
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="about fade" id="about">
+
+            <div class="container">
+
+                <h2>ABOUT</h2>
+
+                <div class="about-image">
+
+                    <img
+                        src="images/ねぎぽん.jpg"
+                        alt="たこ焼き"
+                    >
+
+                    <div class="about-text">
+
+                        <p>
+                            「たこ焼き × BAR 」をコンセプトにした<br>
+                            新感覚のたこやきBAR<br><br>
+
+                            焼きたてのたこやきを囲みながら<br>
+                            おいしいお酒と会話を楽しむひととき<br><br>
+
+                            友人と、恋人と、家族と、<br>
+                            何気ない時間が少し特別な思い出になる場所<br><br>
+
+                            どうぞ、TACOBAで<br>
+                            <strong>「丸い時間」</strong>をお過ごしください
+                        </p>
+
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MENU
+        ========================== -->
+
+        <section class="menu fade" id="menu">
+
+            <div class="container">
+
+                <h2>MENU</h2>
+
+                <div class="gallery-grid">
+
+            <div class="menu-card">
+                <img src="images/たこやき.jpg" alt="たこ焼き">
+                <a href="menu1.html">TACOYAKI</a>
+            </div>
+            <div class="menu-card">
+                <img src="images/ビールサーバー.jpg" alt="ビール">
+                <a href="menu2.html">DRINK</a>
+            </div>
+            <div class="menu-card">
+                <img src="images/おつまみ.jpg" alt="おつまみ">
+                <a href="menu3.html">SNACK</a>
+            </div>
+
+</div>
+
+
+<!-- 料理写真スライダー -->
+<div class="food-slider">
+    <div class="food-slider-track">
+        <img src="images/poteto.jpg" alt="料理写真">
+        <img src="images/passhon.jpg" alt="料理写真">
+        <img src="images/edamame.jpg" alt="料理写真">
+        <img src="images/ju-su.jpg" alt="料理写真">
+        <img src="images/ti-zu.jpg" alt="料理写真">
+        <img src="images/1たこ.jpg" alt="料理写真">
+       
+
+        <!-- 無限ループ用に同じ写真をもう一度 -->
+ <img src="images/ねぎぽん.jpg" alt="料理写真">
+        <img src="images/明太マヨ.jpg" alt="料理写真">
+        <img src="images/串刺したこやき.jpg" alt="料理写真">
+        <img src="images/uisuki-.jpg" alt="料理写真">
+        <img src="images/乾杯.jpg" alt="料理写真">
+        <img src="images/nattu.jpg" alt="料理写真">
+
+    </div>
+</div>       
+        </section>
+
+
+        <!-- =========================
+             NEWS
+        ========================== -->
+
+        <section class="gallery" id="gallery">
+
+            <div class="container">
+
+                <h2>NEWS</h2>
+
+                <div class="news-list">
+
+    <a href="news1.html" class="news-item">
+
+        <time datetime="2026-10-20">
+    <span class="new-badge">NEW!</span>
+    2026/<br>10/20
+</time>
+
+<span>
+    たこ焼きに季節限定の”秋味”登場！！食べてみてのお楽しみ～
+</span>
+
+
+
+    </a>
+
+
+    <a href="news2.html" class="news-item">
+
+        <time datetime="2026-10-17">
+            2026/<br>10/17
+        </time>
+
+        <span>
+            OPENから1週間でたくさんのお客様にお越しいただきました！
+        </span>
+
+    </a>
+
+
+    <a href="news3.html" class="news-item">
+
+        <time datetime="2026-10-10">
+            2026/<br>10/10
+        </time>
+
+        <span>
+            たこ焼きBAR TaCoBaがNEW OPEN！OPEN記念でビール半額！！！
+        </span>
+
+    </a>
+
+</div>
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESERVE
+        ========================== -->
+
+<section class="shop fade" id="shop">
+    <div class="container">
+
+        <h2 id="rese">RESERVE</h2>
+
+        <div class="reserve-image">
+            <img src="images/pa-ti-.jpg" alt="パーティー">
+
+            <a href="reserve.html" class="btn">
+                RESERVE
+            </a>
+        </div>
+
+        <p id="prese"><strong>
+            宴会・パーティー・サプライズイベント<br>
+            様々なシーンに合わせてご予約を承ります</strong>
+        </p>
+
+    </div>
+</section>
+
+
+
+    <!-- =========================
+        FIXED PAGE TOP
+    ========================= -->
+
+    <div class="top-link fixed-top">
+        <a href="#top" class="back-top">
+            <span>PAGE TOP</span>
+        </a>
+    </div>
+  
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div id="yoko">
+
+            <!-- 店舗情報 -->
+            <div class="footer-info">
+
+                <img
+                    src="images/ロゴ.png"
+                    alt="TACOBAロゴ"
+                >
+
+                <p id="add">
+
+                    〒923-0043<br>
+                    石川県小松市一針町ホ47番地
+
+                    <span>
+                        営業時間：17:00〜24:00
+                    </span>
+
+                    <span>
+                        TEL：0761-21-8700
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <!-- Google Map -->
+            <div class="map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.5499728790896!2d136.47636599999998!3d36.420081999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff851da60dd4a6d%3A0x3aa1ffc4e0c7a144!2z44OJ44Oq44O844Og44Kr44Os44OD44K4!5e0!3m2!1sja!2sjp!4v1788230058820!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            </div>
+
+        </div>
+
+            
+
+        <p>
+            © 2026 TACOBA
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         LIGHTBOX
+    ========================== -->
+
+    <div id="lightbox">
+
+        <button
+            id="close"
+            type="button"
+            aria-label="画像を閉じる"
+        >
+            ×
+        </button>
+
+        <img
+            id="lightbox-img"
+            src=""
+            alt=""
+        >
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           ハンバーガーメニュー
+        ========================== */
+
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+        const overlay = document.getElementById("overlay");
+
+
+        // メニュー開閉
+        hamburger.addEventListener("click", () => {
+
+            nav.classList.toggle("active");
+            overlay.classList.toggle("active");
+
+            hamburger.textContent =
+                nav.classList.contains("active")
+                    ? "✕"
+                    : "☰";
+
+        });
+
+
+        // オーバーレイをクリックして閉じる
+        overlay.addEventListener("click", () => {
+
+            nav.classList.remove("active");
+            overlay.classList.remove("active");
+            hamburger.textContent = "☰";
+
+        });
+
+
+        // ナビリンクをクリックして閉じる
+        document.querySelectorAll("#nav a").forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                nav.classList.remove("active");
+                overlay.classList.remove("active");
+                hamburger.textContent = "☰";
+
+            });
+
+        });
+
+
+        // PCサイズになったらメニューを閉じる
+        window.addEventListener("resize", () => {
+
+            if (window.innerWidth > 768) {
+
+                nav.classList.remove("active");
+                overlay.classList.remove("active");
+                hamburger.textContent = "☰";
+
+            }
+
+        });
+
+
+        /* =========================
+           スクロールアニメーション
+        ========================== */
+
+        const fades = document.querySelectorAll(".fade");
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+
+        fades.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =========================
+           オープニング
+        ========================== */
+
+        const loading = document.getElementById("loading");
+        const openingVideo = document.getElementById("openingVideo");
+
+
+        // 3秒後にオープニング終了
+        setTimeout(() => {
+
+            loading.classList.add("fadeout");
+
+        }, 3000);
+
+
+        // 動画読み込みエラー時
+        openingVideo.addEventListener("error", () => {
+
+            console.log("オープニング動画を読み込めませんでした");
+
+            loading.classList.add("fadeout");
+
+        });
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const loading = document.getElementById("loading");
+    const video = document.getElementById("openingVideo");
+
+    // すでにオープニングを見たか確認
+    const openingPlayed = sessionStorage.getItem("openingPlayed");
+
+    if (openingPlayed) {
+
+        // 2ページ目以降はオープニングを表示しない
+        loading.classList.add("fadeout");
+
+    } else {
+
+        // 初回だけ記録
+        sessionStorage.setItem("openingPlayed", "true");
+
+        // 動画が終わったらフェードアウト
+        video.addEventListener("ended", () => {
+            loading.classList.add("fadeout");
+        });
+
+    }
+
+});
+
+        /* =========================
+           ヒーロー動画切り替え
+        ========================== */
+
+        const movie = document.getElementById("heroMovie");
+
+
+        function changeMovie() {
+
+            const movieSrc =
+                window.innerWidth <= 768
+                    ? "movie/haidouzo.mp4"
+                    : "movie/kanpai.mp4";
+
+
+            movie.src = movieSrc;
+            movie.load();
+
+
+            movie.play().catch((error) => {
+
+                console.log(error);
+
+            });
+
+        }
+
+
+        // 初回実行
+        changeMovie();
+
+
+        // 画面サイズ変更時
+        window.addEventListener("resize", changeMovie);
+
+
+        /* =========================
+           LIGHTBOX
+        ========================== */
+
+        const images = document.querySelectorAll(".gallery-grid img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeButton = document.getElementById("close");
+
+
+        // 画像クリック
+        images.forEach((img) => {
+
+            img.addEventListener("click", (event) => {
+
+                // MENUカードのリンク移動を防ぐ
+                event.preventDefault();
+
+                lightbox.style.display = "flex";
+
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+
+            });
+
+        });
+
+
+        // 閉じるボタン
+        closeButton.addEventListener("click", () => {
+
+            lightbox.style.display = "none";
+
+        });
+
+
+        // 背景クリックで閉じる
+        lightbox.addEventListener("click", (event) => {
+
+            if (event.target === lightbox) {
+
+                lightbox.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

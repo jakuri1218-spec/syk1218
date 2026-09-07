@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>たこ焼き | TaCoBa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="menu1-page">
+
+    <header>
+    <div class="container">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/ロゴ.png" alt="TaCoBaロゴ" width="130" height="100">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <nav id="nav">
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#menu">MENU</a>
+            <a href="index.html#gallery">NEWS</a>
+            <a href="reserve.html">RESERVE</a>
+        </nav>
+
+    </div>
+</header>
+
+<div id="overlay"></div>
+
+<nav class="breadcrumb">
+    <a href="index.html">HOME</a>
+    <span>›</span>
+
+    <a href="index.html#menu">MENU</a>
+    <span>›</span>
+
+    <span class="current">TACOYAKI</span>
+</nav>
+
+<div id="photo">
+
+<img class="main-photo" src="images/明太マヨ.jpg" alt="明太マヨたこ焼き">
+
+<div class="sub-photo">
+<img src="images/ねぎぽん.jpg" alt="ねぎぽん">
+<img src="images/串刺したこやき.jpg" alt="串刺し">
+<img src="images/鉄板.jpg" alt="鉄板">
+
+</div>
+
+<div class="menu-item"> <span>ソースたこ焼き（6個）</span> <span>¥680</span> </div> <div class="menu-item"> <span>ねぎポン酢</span> <span>¥720</span> </div> <div class="menu-item"> <span>明太マヨ</span> <span>¥750</span> </div> <div class="menu-item"> <span>チーズたこ焼き</span> <span>¥780</span> </div> <div class="menu-item"> <span>塩ごま油</span> <span>¥720</span> </div> <div class="menu-item"> <span>だし醤油</span> <span>¥700</span> </div>
+
+</div>
+
+<p id="pmoment">
+TaCoBaのたこ焼きは<br>どこか懐かしい味に仕上げております<br>
+お酒を飲みながらゆっくりたべて、冷めてもおいしい<br>
+<br>店長が祖母から教わった出汁のきいた生地と新鮮なタコ<br>
+ふとしたときに食べたいと思う<br>クセになる味です<br><br>
+
+焼きたての丸いたこ焼きと<br>お酒とおしゃべりで<br>
+丸い時間を作りましょう
+</p>
+
+    <div class="top-link fixed-top">
+        <a href="#top" class="back-top">
+            <span>PAGE TOP</span>
+        </a>
+    </div>
+
+
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+const overlay = document.getElementById("overlay");
+
+
+/* ハンバーガーをクリック */
+
+hamburger.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+        hamburger.textContent = "✕";
+    }else{
+        hamburger.textContent = "☰";
+    }
+
+});
+
+
+/* 背景をクリック */
+
+overlay.addEventListener("click", () => {
+
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+
+    hamburger.textContent = "☰";
+
+});
+
+
+/* メニューをクリックしたら閉じる */
+
+document.querySelectorAll("#nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+
+        hamburger.textContent = "☰";
+
+    });
+
+});
+
+
+/* PCサイズに戻ったら閉じる */
+
+window.addEventListener("resize", () => {
+
+    if(window.innerWidth > 768){
+
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+
+        hamburger.textContent = "☰";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+
